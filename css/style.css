@@ -167,9 +167,9 @@ section{
     padding:80px 10%;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 900px) {
     .hero h1 {
-        font-size: 3px;
+        font-size: 2rem;
     }
 }
 
