@@ -168,6 +168,10 @@ section{
 }
 
 @media (max-width: 900px) {
+    section{
+        padding:80px 5%;
+    }
+
     .hero h1 {
         font-size: 25px;
     }
