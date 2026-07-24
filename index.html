@@ -1,72 +1,82 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>サークル名</title>
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/news.css">
-        <link rel="stylesheet" href="css/events.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サークル名</title>
 
-        <header>
-            <div class="logo">
-                サークル名
-            </div>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/events.css">
+</head>
 
-            <button class="menu-btn" id="menu-btn">
-                ☰
-            </button>
-            
-            <nav id="menu">
-                <button class="close-btn">✕</button>
+<body>
 
-                <ul>
-                    <li><a href="#home">ホーム</a></li>
-                    <li><a href="#about">紹介</a></li>
-                    <li><a href="#news">お知らせ</a></li>
-                    <li><a href="#events">イベント</a></li>
-                    <li><a href="#gallery">ギャラリー</a></li>
-                    <li><a href="#contact">お問い合わせ</a></li>
-                </ul>
-            </nav>
+    <!-- ===== ヘッダー ===== -->
+    <header>
 
-            <button id="floating-menu-btn">
-                ☰
-            </button>
-            
-        </header>
+        <div class="logo">
+            サークル名
+        </div>
 
+        <nav id="menu">
+
+            <button class="close-btn">✕</button>
+
+            <ul>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#about">紹介</a></li>
+                <li><a href="#news">お知らせ</a></li>
+                <li><a href="#events">イベント</a></li>
+                <li><a href="#gallery">ギャラリー</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+
+        </nav>
+
+        <button id="floating-menu-btn">
+            <img src="images/menu.png" alt="メニュー">
+        </button>
+
+    </header>
+
+    <!-- ===== メイン ===== -->
+    <main>
+
+        <!-- ホーム -->
         <section id="home" class="hero">
+
             <h1 class="home_h1">サークル名へようこそ！</h1>
             <p>楽しく活動しよう！</p>
 
             <button>新入部員募集中！</button>
+
         </section>
 
+        <!-- 紹介 -->
         <section id="about">
 
             <h2>サークル紹介</h2>
 
-            <div class="card">
+            <a href="#" class="card">
                 <h3>活動内容</h3>
                 <p>ここに活動内容</p>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="#" class="card">
                 <h3>活動日時</h3>
                 <p>毎週○曜日</p>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="#" class="card">
                 <h3>活動場所</h3>
                 <p>大学名</p>
-            </div>
+            </a>
 
         </section>
 
+        <!-- お知らせ -->
         <section id="news">
 
             <h2>お知らせ</h2>
@@ -77,6 +87,7 @@
 
         </section>
 
+        <!-- イベント -->
         <section id="events">
 
             <h2>イベント</h2>
@@ -84,45 +95,52 @@
             <div id="event-list"></div>
 
         </section>
-<!--
+
+        <!--
         <section id="gallery">
 
             <h2>ギャラリー</h2>
 
             <div class="gallery">
-                <img src="images/hero.jpg">
-                <img src="images/hero.jpg">
-                <img src="images/hero.jpg">
+                <img src="images/hero.jpg" alt="">
+                <img src="images/hero.jpg" alt="">
+                <img src="images/hero.jpg" alt="">
             </div>
 
         </section>
--->
-        <footer>
+        -->
 
-            <h2>学生自治会</h2>
+    </main>
 
-            <section id="contact">
+    <!-- ===== フッター ===== -->
+    <footer>
 
-                <h3>お問い合わせ</h3>
+        <h2>学生自治会</h2>
 
-                <p>メール：au.@gmail.com</p>
-                
-                <br>
-                <br>
+        <section id="contact">
 
-                <p>
-                    Webサイトに関する意見・要望は、下記フォームから。
-                </p>
+            <h3>お問い合わせ</h3>
 
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAqljnJQ9snqyRTfzBqXYG0pGK2aIgDdio1BH0t7ig3-97pQ/viewform?usp=publish-editor" target="_blank">
-                    アンケートに回答する
-                </a>
+            <p>メール：au.@gmail.com</p>
 
-            </section>
+            <br><br>
 
-        </footer>
-        <script src="js/main.js"></script>
-        <script src="js/events.js"></script>
-        <script src="js/news.js"></script>
-    </body>
+            <p>
+                Webサイトに関する意見・要望は、下記フォームから。
+            </p>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAqljnJQ9snqyRTfzBqXYG0pGK2aIgDdio1BH0t7ig3-97pQ/viewform?usp=publish-editor" target="_blank">
+                アンケートに回答する
+            </a>
+
+        </section>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/news.js"></script>
+
+</body>
+
 </html>

@@ -1,195 +1,227 @@
-/* ---------- PC ---------- */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ==============   共通   ============== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:sans-serif;
-    line-height:1.6;
-    background:#f5f5f5;
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background: #f5f5f5;
 }
 
-header{
+
+/* ==============   ヘッダー   ============== */
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 20px 50px;
+
     background: #222;
-    color: white;
+    color: #fff;
+
     position: relative;
 }
 
-.menu-btn{
-    display: none;
-}
 
-.close-btn{
-    display: none;
-}
+/* ==============   ナビゲーション（PC）   ============== */
 
-nav ul{
+nav ul {
     display: flex;
-    list-style: none;
     gap: clamp(10px, 2vw, 30px);
+
+    list-style: none;
     font-size: clamp(14px, 1.2vw, 20px);
 }
 
-nav li{
+nav li {
     list-style: none;
 }
 
-nav a{
-    color: white;
+nav a {
+    color: #fff;
     text-decoration: none;
     transition: color .3s;
 }
 
-nav a:hover{
+nav a:hover {
     color: #4CAF50;
 }
 
 
-#floating-menu-btn{
-    position: fixed;
-    top: 20px;
-    right: 20px;
+/* ==============   ボタン   ============== */
 
-    width: 50px;
-    height: 50px;
-
-    border: none;
-    border-radius: 50%;
-
-    background: #222;
-    color: white;
-    font-size: 28px;
-
-    cursor: pointer;
-
-    z-index: 2000;
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition: .3s;
+.close-btn {
+    display: none;
 }
 
-#floating-menu-btn.show{
-    opacity: 1;
-    visibility: visible;
-}
-.hero{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:#4CAF50;
-    color:white;
+#floating-menu-btn {
+    display: none;
 }
 
-section{
-    padding:80px 10%;
+
+/* ==============   メイン   ============== */
+
+.hero {
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #51c3fc;
+    color: #fff;
 }
+
+section {
+    padding: 80px 10%;
+}
+
+
+/* ==============   カード   ============== */
 
 .card {
     display: block;
-    background: white;
-    padding: 20px;
+
     margin: 20px 0;
+    padding: 20px;
+
+    background: #fff;
     border-radius: 10px;
 
-    color: black;
+    color: #000;
     text-decoration: none;
 
-    transition: color 0.3s;
+    transition: color .3s;
 }
 
-footer{
-    text-align:center;
-    padding:30px;
-    background:#222;
-    color:white;
+
+/* ==============   フッター   ============== */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #222;
+    color: #fff;
 }
 
-/* ---------- スマホ ---------- */
 
-@media (max-width:770px){
+/* ==============   スマホ   ============== */
 
-    .menu-btn{
-        display: block;
-        font-size: 30px;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-    }
+@media (max-width: 770px) {
 
-    nav{
+    /* ---------- ナビ ---------- */
+
+    nav {
         position: fixed;
         top: 0;
         right: -300px;
+
         width: 280px;
         height: 100vh;
+
         background: #222;
 
         transition: right .3s ease;
-
         z-index: 1000;
     }
 
-    nav.active{
+    nav.active {
         right: 0;
     }
 
-    .close-btn{
+    nav ul {
+        display: flex;
+        flex-direction: column;
+
+        gap: 0;
+        margin-top: 80px;
+        padding: 0;
+    }
+
+    nav li {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    nav a {
         display: block;
+        font-size: 20px;
+    }
+
+
+    /* ---------- 閉じるボタン ---------- */
+
+    .close-btn {
+        display: block;
+
         position: absolute;
         top: 20px;
         right: 20px;
 
         background: none;
         border: none;
-        color: white;
+
+        color: #fff;
         font-size: 30px;
+
         cursor: pointer;
     }
 
-    nav ul{
-        display: flex;
-        flex-direction: column;
-        gap: 0;
 
-        margin-top: 80px;
-        padding: 0;
-    }
+    /* ---------- メニューボタン ---------- */
 
-    nav li{
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-    }
-
-    nav a{
+    #floating-menu-btn {
         display: block;
-        font-size: 20px;
+
+        position: fixed;
+        top: 20px;
+        right: 20px;
+
+        padding: 0;
+
+        background: transparent;
+        border: none;
+
+        opacity: 0;
+        visibility: hidden;
+
+        cursor: pointer;
+        z-index: 2000;
     }
 
-    #floating-menu-btn{
-        display:none;
+    #floating-menu-btn img {
+        width: 50px;
+        height: 50px;
     }
 
-    section{
-        padding:80px 8%;
+    #floating-menu-btn.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    /* ---------- レイアウト ---------- */
+
+    section {
+        padding: 80px 8%;
     }
 
     .home_h1 {
         font-size: 25px;
     }
-    
+
     .card_right p {
         font-size: 15px;
     }
+
 }
